@@ -42,6 +42,9 @@ dependencies {
 	implementation("com.ninja-squad:springmockk:3.1.1")
 // https://mvnrepository.com/artifact/javax.validation/validation-api
 	implementation("javax.validation:validation-api:2.0.1.Final")// validation
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.7.1")
+
 
 }
 

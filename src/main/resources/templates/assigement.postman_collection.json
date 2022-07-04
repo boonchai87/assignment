@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "d23aa062-ea84-4ffa-a69f-e39bdeea6c8a",
+		"name": "assigement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8118654"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"datetime\": \"2019-10-05T14:48:01+07:00\",\r\n    \"amount\":1.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-assignment.herokuapp.com/save",
+					"protocol": "https",
+					"host": [
+						"kotlin-assignment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDatetime\": \"2019-10-05T10:48:01+00:00\",\r\n    \"endDatetime\": \"2019-11-05T18:48:02+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kotlin-assignment.herokuapp.com/history",
+					"protocol": "https",
+					"host": [
+						"kotlin-assignment",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
