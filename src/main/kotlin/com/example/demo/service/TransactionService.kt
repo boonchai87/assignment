@@ -14,11 +14,11 @@ class TransactionService(val repository:TransactionRepository) {
     fun getHello(): String {
         return "hello service"
     }
-    fun save(transactionRequest:TransactionRequest){
+    fun save(transactionRequest:TransactionRequest): Transaction{
         val dateTime =  Utilities.convertStringToDate(transactionRequest.datetime);
         val transaction = Transaction(null,dateTime,transactionRequest.amount)
         // process datetime to
-        repository.save(transaction)
+        return repository.save(transaction)
     }
     fun query(startDateStr:String,endDateStr:String):List<QueryResponse>{
         // validate
@@ -43,7 +43,7 @@ class TransactionService(val repository:TransactionRepository) {
             val hour = (result.get("hour")as Double).toString().replace(".0","")
 
             var datetime = year+"-"+month+"-"+day+"T"+hour.toString()+":00:00"+timezone;
-            val amount = result.get("amount") as BigInteger
+            val amount = result.get("amount") as Double
             list.add(QueryResponse(datetime,amount.toDouble()) )
         }
         return list;

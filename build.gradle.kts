@@ -25,6 +25,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+
 	// add by neng
 	runtimeOnly("org.springframework.boot:spring-boot-devtools")// for reload
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")// mongodb
@@ -34,6 +36,13 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	// https://mvnrepository.com/artifact/junit/junit
 	testImplementation("junit:junit:4.13.2")
+	// https://mvnrepository.com/artifact/org.mockito/mockito-core
+	//testImplementation("org.mockito:mockito-core:2.1.0")
+// https://mvnrepository.com/artifact/com.ninja-squad/springmockk
+	implementation("com.ninja-squad:springmockk:3.1.1")
+// https://mvnrepository.com/artifact/javax.validation/validation-api
+	implementation("javax.validation:validation-api:2.0.1.Final")// validation
+
 }
 
 tasks.withType<KotlinCompile> {
