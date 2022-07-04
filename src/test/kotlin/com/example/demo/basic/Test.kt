@@ -8,7 +8,7 @@ import java.time.LocalTime
 import java.util.*
 
 
-fun main(args: Array<String>) {
+fun main(args: Array<String>) { 
     var data = "2019-10-05T14:48:01+01:00";
     //data = "my,name,is,khan";
     //val data.split(","))
